@@ -15,6 +15,7 @@
 		780D9A562BCDD4D4001BCDB2 /* ComputationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A552BCDD4D3001BCDB2 /* ComputationView.swift */; };
 		780D9A582BCDD4E8001BCDB2 /* CalcButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A572BCDD4E8001BCDB2 /* CalcButtonsView.swift */; };
 		780D9A5A2BCDD4F7001BCDB2 /* LightDarkModeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A592BCDD4F7001BCDB2 /* LightDarkModeIndicatorView.swift */; };
+		780D9A5C2BCDD7DA001BCDB2 /* CalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A5B2BCDD7DA001BCDB2 /* CalcButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		780D9A552BCDD4D3001BCDB2 /* ComputationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputationView.swift; sourceTree = "<group>"; };
 		780D9A572BCDD4E8001BCDB2 /* CalcButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButtonsView.swift; sourceTree = "<group>"; };
 		780D9A592BCDD4F7001BCDB2 /* LightDarkModeIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDarkModeIndicatorView.swift; sourceTree = "<group>"; };
+		780D9A5B2BCDD7DA001BCDB2 /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				780D9A432BCDAA7C001BCDB2 /* MainCalcView.swift */,
 				780D9A592BCDD4F7001BCDB2 /* LightDarkModeIndicatorView.swift */,
+				780D9A5B2BCDD7DA001BCDB2 /* CalcButton.swift */,
 				780D9A572BCDD4E8001BCDB2 /* CalcButtonsView.swift */,
 				780D9A552BCDD4D3001BCDB2 /* ComputationView.swift */,
 			);
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				780D9A5A2BCDD4F7001BCDB2 /* LightDarkModeIndicatorView.swift in Sources */,
+				780D9A5C2BCDD7DA001BCDB2 /* CalcButton.swift in Sources */,
 				780D9A442BCDAA7C001BCDB2 /* MainCalcView.swift in Sources */,
 				780D9A582BCDD4E8001BCDB2 /* CalcButtonsView.swift in Sources */,
 				780D9A542BCDBFCE001BCDB2 /* Colors.swift in Sources */,
