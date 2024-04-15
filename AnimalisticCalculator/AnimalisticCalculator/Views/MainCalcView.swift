@@ -8,16 +8,24 @@
 import SwiftUI
 
 struct MainCalcView: View {
+    @State var lightMode: Bool = true
+    @State var currentComputation: String = ""
+    @State var mainResult: String = "0"
+    
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-                .font(.largeTitle)
-                .foregroundStyle(Asset.textColorPrimary.color)
+        ZStack {
+            Asset.backgroundPrimary.color
+                .ignoresSafeArea()
+            VStack {
+                ComputationView()
+                LightDarkModeIndicatorView()
+                CalcButtonsView()
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
     MainCalcView()
+        .preferredColorScheme(.dark)
 }
