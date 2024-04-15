@@ -17,8 +17,9 @@ struct CalcButton: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .padding()
+            .frame(width: 200, height: 200)
             .background(color)
             .clipShape(Circle())
+            .shadow(radius: 20)
     }
 }
