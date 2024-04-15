@@ -20,7 +20,7 @@ struct MainCalcView: View {
                 ComputationView(currentComputation: currentComputation, mainResult: mainResult)
                 LightDarkModeIndicatorView()
                 CalcButtonsView(currentComputation: $currentComputation, mainResult: $mainResult)
-            }
+            }.padding()
         }
     }
 }

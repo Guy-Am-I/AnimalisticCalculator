@@ -13,9 +13,11 @@ struct LightDarkModeIndicatorView: View {
     var body: some View {
         HStack {
             Button(action: {isLightMode.toggle()}, label: {
-                isLightMode ? Image(systemName: "moon") : Image(systemName: "sun.max")
+                Image(systemName: isLightMode ? "moon" : "sun.max").foregroundStyle(Asset.textColorPrimary.color)
             })
-            .buttonStyle(CalcButton(color: Asset.foregroundDigitButton.color, size: .medium))
+            .buttonStyle(CalcButton(color: Asset.foregroundDigitButton.color))
+            Spacer()
+            Spacer()
         }
         .environment(\.colorScheme, isLightMode ? .light : .dark)
     }

@@ -7,19 +7,18 @@
 
 import SwiftUI
 
-enum ButtonSizes {
-    case small, medium, large
-}
-
 struct CalcButton: ButtonStyle {
     let color: Color
-    let size: ButtonSizes
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .frame(width: 200, height: 200)
+            .padding()
+            .controlSize(.large)
             .background(color)
             .clipShape(Circle())
             .shadow(radius: 20)
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
     }
 }
+
