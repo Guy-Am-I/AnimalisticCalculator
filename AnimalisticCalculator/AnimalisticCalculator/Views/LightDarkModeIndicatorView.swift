@@ -12,7 +12,10 @@ struct LightDarkModeIndicatorView: View {
     
     var body: some View {
         HStack {
-            CalcButton(color: .blue, size: .small, image: "moon")
+            Button(action: {}, label: {
+                Image("moon")
+            })
+            .buttonStyle(CalcButton(color: .blue, size: .medium))
         }
     }
 }

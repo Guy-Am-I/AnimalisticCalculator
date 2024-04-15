@@ -11,18 +11,14 @@ enum ButtonSizes {
     case small, medium, large
 }
 
-struct CalcButton: View {
+struct CalcButton: ButtonStyle {
     let color: Color
     let size: ButtonSizes
-    let image: String
     
-    var body: some View {
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-            Image(systemName: image)
-        })
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(color)
+            .clipShape(Circle())
     }
-}
-
-#Preview {
-    CalcButton(color: .black, size: .medium, image: "dog.fill")
 }
