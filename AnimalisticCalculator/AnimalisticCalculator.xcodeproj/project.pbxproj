@@ -11,7 +11,7 @@
 		780D9A442BCDAA7C001BCDB2 /* MainCalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A432BCDAA7C001BCDB2 /* MainCalcView.swift */; };
 		780D9A462BCDAA7F001BCDB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780D9A452BCDAA7F001BCDB2 /* Assets.xcassets */; };
 		780D9A492BCDAA7F001BCDB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 780D9A482BCDAA7F001BCDB2 /* Preview Assets.xcassets */; };
-		780D9A522BCDB7F2001BCDB2 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A512BCDB7F2001BCDB2 /* Assets.swift */; };
+		780D9A542BCDBFCE001BCDB2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A532BCDBFCE001BCDB2 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,7 @@
 		780D9A432BCDAA7C001BCDB2 /* MainCalcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCalcView.swift; sourceTree = "<group>"; };
 		780D9A452BCDAA7F001BCDB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		780D9A482BCDAA7F001BCDB2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		780D9A512BCDB7F2001BCDB2 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		780D9A532BCDBFCE001BCDB2 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 		780D9A502BCDB5DB001BCDB2 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				780D9A512BCDB7F2001BCDB2 /* Assets.swift */,
+				780D9A532BCDBFCE001BCDB2 /* Colors.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -157,8 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				780D9A442BCDAA7C001BCDB2 /* MainCalcView.swift in Sources */,
+				780D9A542BCDBFCE001BCDB2 /* Colors.swift in Sources */,
 				780D9A422BCDAA7C001BCDB2 /* AnimalisticCalculatorApp.swift in Sources */,
-				780D9A522BCDB7F2001BCDB2 /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

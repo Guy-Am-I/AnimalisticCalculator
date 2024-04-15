@@ -10,10 +10,9 @@ import SwiftUI
 struct MainCalcView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
             Text("Hello, world!")
+                .font(.largeTitle)
+                .foregroundStyle(Asset.textColorPrimary.color)
         }
         .padding()
     }
