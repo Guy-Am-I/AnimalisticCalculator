@@ -17,9 +17,9 @@ struct MainCalcView: View {
             Asset.backgroundPrimary.color
                 .ignoresSafeArea()
             VStack {
-                ComputationView()
+                ComputationView(currentComputation: currentComputation, mainResult: mainResult)
                 LightDarkModeIndicatorView()
-                CalcButtonsView()
+                CalcButtonsView(currentComputation: $currentComputation, mainResult: $mainResult)
             }
         }
     }

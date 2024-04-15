@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct ComputationView: View {
+    let currentComputation: String
+    let mainResult: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(currentComputation)
+            Text(mainResult)
+        }
     }
 }
 
 #Preview {
-    ComputationView()
+    ComputationView(currentComputation: "5 + 1", mainResult: "6")
 }
