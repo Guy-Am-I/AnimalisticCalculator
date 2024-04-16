@@ -16,9 +16,11 @@ struct MainCalcView: View {
         ZStack {
             Asset.backgroundPrimary.color
                 .ignoresSafeArea()
-            VStack {
-                ComputationView(currentComputation: currentComputation, mainResult: mainResult)
-                Spacer(minLength: 180)
+            VStack(alignment: .leading) {
+                HStack() {
+                    Spacer()
+                    ComputationView(currentComputation: currentComputation, mainResult: mainResult)
+                }
                 LightDarkModeIndicatorView(isLightMode: $lightMode)
                 CalcButtonsView(expression: $currentComputation, mainResult: $mainResult)
             }.padding()

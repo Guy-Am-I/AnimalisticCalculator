@@ -8,26 +8,30 @@
 import SwiftUI
 
 struct ComputationView: View {
+    let textSize: CGFloat = 50
     let currentComputation: String
     let mainResult: String
     
     var body: some View {
-        VStack(spacing: 10) {
+        VStack(alignment: .trailing, spacing: 10) {
+            Spacer()
             HStack {
-                Spacer()
                 Text(currentComputation)
                     .foregroundStyle(Asset.textColorPrimary.color)
+                    .font(.system(size: textSize * 0.6))
                     .lineLimit(1)
             }.minimumScaleFactor(0.1)
             HStack {
-                Spacer()
                 Text(mainResult)
                     .foregroundStyle(Asset.textColorPrimary.color)
-                    .font(.largeTitle)
+                    .font(.system(size: textSize))
                     .fontWeight(.semibold)
                     .lineLimit(1)
             }.minimumScaleFactor(0.1)
-        }.padding(.horizontal)
+            Spacer()
+        }
+        .frame(maxHeight: 250)
+        .padding()
     }
 }
 

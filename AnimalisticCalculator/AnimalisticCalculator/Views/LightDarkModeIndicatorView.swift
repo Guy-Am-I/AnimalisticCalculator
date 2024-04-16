@@ -14,16 +14,11 @@ struct LightDarkModeIndicatorView: View {
     let bgColor = Asset.foregroundDigitButton.color
     
     var body: some View {
-        HStack {
-            Button(action: {
-                isLightMode.toggle()
-            }, label: {
-                ButtonView(size: 45, buttonSymbol: isLightMode ? .lightMode : .darkMode, bgColor: bgColor, fgColor: fgColor)
-            })
-            Spacer()
-            Spacer()
-        }
-        .padding(.horizontal, 5)
+        Button(action: {
+            isLightMode.toggle()
+        }, label: {
+            ButtonView(size: 45, buttonSymbol: isLightMode ? .lightMode : .darkMode, bgColor: bgColor, fgColor: fgColor)
+        })
     }
 }
 

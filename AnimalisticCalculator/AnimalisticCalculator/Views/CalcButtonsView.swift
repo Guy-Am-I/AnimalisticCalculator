@@ -75,7 +75,6 @@ struct CalcButtonsView: View {
                     }
                 }
             }
-            .frame(alignment: .bottom)
         }
     }
     
