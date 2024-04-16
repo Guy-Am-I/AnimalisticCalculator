@@ -29,23 +29,24 @@ enum ButtonSymbol: String {
     case subtract = "-"
     case multiply = "×"
     case divide = "÷"
+    case percent = "%"
     
+    case negative = "IMGplus.forwardslash.minus"
     case backspace = "IMGdelete.left"
     case equal = "IMGequal"
-    case percent = "IMGpercent"
     
+    case percentImg = "IMGpercent"
     case addImg = "IMGplus"
     case subtractImg = "IMGminus"
     case multiplyImg = "IMGmultiply"
     case divideImg = "IMGdivide"
     
-    case dog = "IMGdog"
     case lightMode = "IMGsun.max"
     case darkMode = "IMGmoon"
 }
 
 let enumDigits: [ButtonSymbol] = [.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero]
-let enumOperators: [ButtonSymbol] = [.subtract, .add, .multiply, .divide, .subtractImg, .addImg, .multiplyImg, .divideImg]
+let enumOperators: [ButtonSymbol] = [.subtract, .add, .multiply, .divide, .percent, .subtractImg, .addImg, .multiplyImg, .divideImg, .percentImg]
 
 func enumOperatorImgToText(_ operatorImg: ButtonSymbol) -> ButtonSymbol {
     switch operatorImg {
@@ -57,8 +58,11 @@ func enumOperatorImgToText(_ operatorImg: ButtonSymbol) -> ButtonSymbol {
         return .multiply
     case .divideImg:
         return .divide
+    case .percentImg:
+        return .percent
     default:
-        return .zero
+        //ERRROR
+        return .darkMode
     }
 }
 

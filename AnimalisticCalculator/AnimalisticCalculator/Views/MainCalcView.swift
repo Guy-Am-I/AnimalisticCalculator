@@ -20,7 +20,7 @@ struct MainCalcView: View {
                 ComputationView(currentComputation: currentComputation, mainResult: mainResult)
                 Spacer(minLength: 180)
                 LightDarkModeIndicatorView(isLightMode: $lightMode)
-                CalcButtonsView(currentComputation: $currentComputation, mainResult: $mainResult)
+                CalcButtonsView(expression: $currentComputation, mainResult: $mainResult)
             }.padding()
         }
         .environment(\.colorScheme, lightMode ? .light : .dark)
