@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LightDarkModeIndicatorView: View {
-    //@Environment(\.colorScheme) var colorScheme
     @Binding var isLightMode: Bool
     
     let fgColor = Asset.textColorPrimary.color
@@ -19,9 +18,8 @@ struct LightDarkModeIndicatorView: View {
             Button(action: {
                 isLightMode.toggle()
             }, label: {
-                Image(systemName: isLightMode ? "moon" : "sun.max").foregroundStyle(fgColor)
+                ButtonView(size: 45, buttonSymbol: isLightMode ? .lightMode : .darkMode, bgColor: bgColor, fgColor: fgColor)
             })
-            .buttonStyle(CalcButton(size: 45, bgColor: bgColor, shadowColor: fgColor))
             Spacer()
             Spacer()
         }

@@ -24,20 +24,42 @@ enum ButtonSymbol: String {
     case nine = "9"
     case zero = "0"
     case clear = "AC"
-    case comma = ","
     case decimal = "."
+    case add = "+"
+    case subtract = "-"
+    case multiply = "×"
+    case divide = "÷"
     
     case backspace = "IMGdelete.left"
-    case add = "IMGplus"
-    case subtract = "IMGminus"
-    case multiply = "IMGmultiply"
-    case divide = "IMGdivide"
     case equal = "IMGequal"
-    case paren = "IMGparentheses"
     case percent = "IMGpercent"
+    
+    case addImg = "IMGplus"
+    case subtractImg = "IMGminus"
+    case multiplyImg = "IMGmultiply"
+    case divideImg = "IMGdivide"
+    
+    case dog = "IMGdog"
+    case lightMode = "IMGsun.max"
+    case darkMode = "IMGmoon"
 }
 
+let enumDigits: [ButtonSymbol] = [.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero]
+let enumOperators: [ButtonSymbol] = [.subtract, .add, .multiply, .divide, .subtractImg, .addImg, .multiplyImg, .divideImg]
 
-let enumOperators: [ButtonSymbol] = [.subtract, .add, .multiply, .divide]
+func enumOperatorImgToText(_ operatorImg: ButtonSymbol) -> ButtonSymbol {
+    switch operatorImg {
+    case .addImg:
+        return .add
+    case .subtractImg:
+        return .subtract
+    case .multiplyImg:
+        return .multiply
+    case .divideImg:
+        return .divide
+    default:
+        return .zero
+    }
+}
 
 

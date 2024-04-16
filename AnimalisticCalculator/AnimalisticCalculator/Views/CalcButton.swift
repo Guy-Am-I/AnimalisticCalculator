@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-struct CalcButton: ButtonStyle {
-    let size: CGFloat
-    let bgColor: Color
-    let shadowColor: Color
-    
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .frame(width: size, height: size)
-            .background(bgColor)
-            .clipShape(Circle())
-            .shadow(color: shadowColor.opacity(0.2), radius: 10, x: 5, y: 5)
-            .scaleEffect(configuration.isPressed ? 1.2 : 1)
-            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
-    }
-}
-
 
 struct ButtonView: View {
     let size: CGFloat
@@ -43,7 +27,6 @@ struct ButtonView: View {
     }
     
     var body: some View {
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
             ZStack {
                 Text(text ?? "")
                 Image(systemName: systemImage ?? "")
@@ -51,9 +34,10 @@ struct ButtonView: View {
             .font(.system(size: size * 0.4))
             .fontWeight(.semibold)
             .foregroundStyle(fgColor)
-        })
-        .buttonStyle(CalcButton(size: size, bgColor: bgColor, shadowColor: fgColor))
-        
+            .frame(width: size, height: size)
+            .background(bgColor)
+            .clipShape(Circle())
+            .shadow(color: fgColor.opacity(0.2), radius: 10, x: 5, y: 5)
     }
 }
 
