@@ -18,6 +18,7 @@
 		780D9A5C2BCDD7DA001BCDB2 /* CalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A5B2BCDD7DA001BCDB2 /* CalcButton.swift */; };
 		780D9A5E2BCDEE80001BCDB2 /* ButtonEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A5D2BCDEE80001BCDB2 /* ButtonEnums.swift */; };
 		780D9A602BCE0F82001BCDB2 /* StringHelperFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A5F2BCE0F82001BCDB2 /* StringHelperFuncs.swift */; };
+		78A816D32BCEDB5A0084B774 /* IpadSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A816D22BCEDB5A0084B774 /* IpadSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		780D9A5B2BCDD7DA001BCDB2 /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
 		780D9A5D2BCDEE80001BCDB2 /* ButtonEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonEnums.swift; path = AnimalisticCalculator/ButtonEnums.swift; sourceTree = SOURCE_ROOT; };
 		780D9A5F2BCE0F82001BCDB2 /* StringHelperFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelperFuncs.swift; sourceTree = "<group>"; };
+		78A816D22BCEDB5A0084B774 /* IpadSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpadSupport.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		780D9A402BCDAA7C001BCDB2 /* AnimalisticCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				78A816D22BCEDB5A0084B774 /* IpadSupport.swift */,
 				780D9A5F2BCE0F82001BCDB2 /* StringHelperFuncs.swift */,
 				780D9A502BCDB5DB001BCDB2 /* Constants */,
 				780D9A4F2BCDAAFF001BCDB2 /* Views */,
@@ -181,6 +184,7 @@
 				780D9A442BCDAA7C001BCDB2 /* MainCalcView.swift in Sources */,
 				780D9A582BCDD4E8001BCDB2 /* CalcButtonsView.swift in Sources */,
 				780D9A542BCDBFCE001BCDB2 /* Colors.swift in Sources */,
+				78A816D32BCEDB5A0084B774 /* IpadSupport.swift in Sources */,
 				780D9A562BCDD4D4001BCDB2 /* ComputationView.swift in Sources */,
 				780D9A422BCDAA7C001BCDB2 /* AnimalisticCalculatorApp.swift in Sources */,
 			);
@@ -322,8 +326,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,8 +354,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

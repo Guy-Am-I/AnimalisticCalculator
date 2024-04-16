@@ -20,6 +20,7 @@ struct RowOfCalcButtonModel: Identifiable {
 }
 
 struct CalcButtonsView: View {
+    let buttonWidthPct = UIDevice.isIpad ? 0.17 : 0.2
     @Binding var expression: String
     @Binding var mainResult: String
     
@@ -58,22 +59,23 @@ struct CalcButtonsView: View {
     
     var body: some View {
         GeometryReader { geo in
+            let buttonSize = geo.size.width * buttonWidthPct
             VStack {
-                Grid() {
+                Grid(horizontalSpacing: 0, verticalSpacing: 20) {
                     ForEach(buttonGrid) { buttonRow in
                         GridRow {
                             ForEach(buttonRow.row) { buttonModel in
                                 Button(action: {
                                     buttonPressed(button: buttonModel.icon)
                                 }, label: {
-                                    ButtonView(size: geo.size.width * 0.2, buttonSymbol: buttonModel.icon, bgColor: buttonModel.bgColor, fgColor: buttonModel.fgColor)
+                                    ButtonView(size: buttonSize, buttonSymbol: buttonModel.icon, bgColor: buttonModel.bgColor, fgColor: buttonModel.fgColor)
                                 })
                             }
                         }
                         .frame(maxWidth: .infinity)
-                        .padding(.vertical, 6)
                     }
                 }
+                .frame(maxHeight: .infinity, alignment: .bottom)
             }
         }
     }

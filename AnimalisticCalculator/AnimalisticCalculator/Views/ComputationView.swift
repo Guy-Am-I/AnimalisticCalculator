@@ -8,29 +8,31 @@
 import SwiftUI
 
 struct ComputationView: View {
-    let textSize: CGFloat = 50
+    let textSize: CGFloat = UIDevice.isIpad ? 150 : 80
     let currentComputation: String
     let mainResult: String
     
     var body: some View {
-        VStack(alignment: .trailing, spacing: 10) {
-            Spacer()
+        VStack(spacing: 5) {
             HStack {
                 Text(currentComputation)
                     .foregroundStyle(Asset.textColorPrimary.color)
-                    .font(.system(size: textSize * 0.6))
+                    .font(.system(size: textSize * 0.5))
                     .lineLimit(1)
-            }.minimumScaleFactor(0.1)
+                    .frame(height: textSize * 0.5)
+            }
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .trailing)
+            .minimumScaleFactor(0.1)
             HStack {
                 Text(mainResult)
                     .foregroundStyle(Asset.textColorPrimary.color)
                     .font(.system(size: textSize))
                     .fontWeight(.semibold)
                     .lineLimit(1)
-            }.minimumScaleFactor(0.1)
+            }
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .trailing)
+            .minimumScaleFactor(0.1)
         }
-        .frame(maxHeight: 200)
-        .padding()
     }
 }
 

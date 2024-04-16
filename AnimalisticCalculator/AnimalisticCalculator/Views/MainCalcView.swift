@@ -16,19 +16,20 @@ struct MainCalcView: View {
         ZStack {
             Asset.backgroundPrimary.color
                 .ignoresSafeArea()
-            VStack(alignment: .leading) {
-                HStack() {
-                    Spacer()
-                    ComputationView(currentComputation: currentComputation, mainResult: mainResult)
-                }
+            VStack {
                 LightDarkModeIndicatorView(isLightMode: $lightMode)
+                Spacer()
+                Spacer()
+                ComputationView(currentComputation: currentComputation, mainResult: mainResult)
+                Spacer()
                 CalcButtonsView(expression: $currentComputation, mainResult: $mainResult)
-            }.padding()
+            }
+            .padding()
         }
         .environment(\.colorScheme, lightMode ? .light : .dark)
     }
 }
 
 #Preview {
-    MainCalcView()
+    MainCalcView(currentComputation: "98898989898989898989889898989898989", mainResult: "98898989898989898989889898989898989")
 }
