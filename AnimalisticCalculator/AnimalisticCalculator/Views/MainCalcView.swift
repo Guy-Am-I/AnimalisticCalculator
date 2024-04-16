@@ -18,6 +18,7 @@ struct MainCalcView: View {
                 .ignoresSafeArea()
             VStack {
                 ComputationView(currentComputation: currentComputation, mainResult: mainResult)
+                Spacer(minLength: 180)
                 LightDarkModeIndicatorView(isLightMode: $lightMode)
                 CalcButtonsView(currentComputation: $currentComputation, mainResult: $mainResult)
             }.padding()

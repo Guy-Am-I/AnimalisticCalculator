@@ -10,7 +10,8 @@ import SwiftUI
 struct CalcButtonModel: Identifiable {
     let id = UUID()
     let icon: ButtonSymbol
-    var color: Color = Asset.foregroundDigitButton.color
+    var bgColor: Color = Asset.foregroundDigitButton.color
+    var fgColor: Color = Asset.textColorPrimary.color
 }
 
 struct RowOfCalcButtonModel: Identifiable {
@@ -24,46 +25,45 @@ struct CalcButtonsView: View {
     
     let buttonGrid: [RowOfCalcButtonModel] = [
         RowOfCalcButtonModel(row: [
-            CalcButtonModel(icon: .clear, color: Asset.textColorPrimary.color),
-            CalcButtonModel(icon: .paren, color: Asset.foregroundActionButton.color),
-            CalcButtonModel(icon: .percent, color: Asset.foregroundActionButton.color),
-            CalcButtonModel(icon: .divide, color: Asset.foregroundActionButton.color)
+            CalcButtonModel(icon: .clear, bgColor: Asset.textColorPrimary.color, fgColor: Asset.textColorSecondary.color),
+            CalcButtonModel(icon: .paren, bgColor: Asset.foregroundActionButton.color),
+            CalcButtonModel(icon: .percent, bgColor: Asset.foregroundActionButton.color),
+            CalcButtonModel(icon: .divide, bgColor: Asset.foregroundActionButton.color)
         ]),
         RowOfCalcButtonModel(row: [
             CalcButtonModel(icon: .seven),
             CalcButtonModel(icon: .eight),
             CalcButtonModel(icon: .nine),
-            CalcButtonModel(icon: .multiply, color: Asset.foregroundActionButton.color)
+            CalcButtonModel(icon: .multiply, bgColor: Asset.foregroundActionButton.color)
         ]),
         RowOfCalcButtonModel(row: [
             CalcButtonModel(icon: .four),
             CalcButtonModel(icon: .five),
             CalcButtonModel(icon: .six),
-            CalcButtonModel(icon: .subtract, color: Asset.foregroundActionButton.color)
+            CalcButtonModel(icon: .subtract, bgColor: Asset.foregroundActionButton.color)
         ]),
         RowOfCalcButtonModel(row: [
             CalcButtonModel(icon: .one),
             CalcButtonModel(icon: .two),
             CalcButtonModel(icon: .three),
-            CalcButtonModel(icon: .add, color: Asset.foregroundActionButton.color)
+            CalcButtonModel(icon: .add, bgColor: Asset.foregroundActionButton.color)
         ]),
         RowOfCalcButtonModel(row: [
             CalcButtonModel(icon: .zero),
             CalcButtonModel(icon: .comma),
             CalcButtonModel(icon: .backspace),
-            CalcButtonModel(icon: .equal, color: Asset.foregroundEqualButton.color)
+            CalcButtonModel(icon: .equal, bgColor: Asset.foregroundEqualButton.color)
         ])
     ]
     
     var body: some View {
         GeometryReader { geo in
             VStack {
-                Spacer()
                 Grid() {
                     ForEach(buttonGrid) { buttonRow in
                         GridRow {
                             ForEach(buttonRow.row) { buttonModel in
-                                ButtonView(size: geo.size.width * 0.2, buttonSymbol: buttonModel.icon, bgColor: buttonModel.color, fgColor: Asset.textColorPrimary.color)
+                                ButtonView(size: geo.size.width * 0.2, buttonSymbol: buttonModel.icon, bgColor: buttonModel.bgColor, fgColor: buttonModel.fgColor)
                             }
                         }
                         .frame(maxWidth: .infinity)

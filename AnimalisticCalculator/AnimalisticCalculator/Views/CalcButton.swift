@@ -58,7 +58,7 @@ struct ButtonView: View {
 }
 
 #Preview {
-    ButtonView(size: 100, buttonSymbol: .divide, bgColor: Asset.foregroundDigitButton.color, fgColor: Asset.textColorPrimary.color)
+    ButtonView(size: 100, buttonSymbol: .clear, bgColor: Asset.foregroundDigitButton.color, fgColor: Asset.textColorPrimary.color)
         .preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
 }
 
