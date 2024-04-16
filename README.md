@@ -1,5 +1,5 @@
 # AnimalisticCalculator
-Calculator app for iphone and ipad with animal inspired design just for fun
+Calculator app project for iphone and ipad
 
 *Features*:
 
