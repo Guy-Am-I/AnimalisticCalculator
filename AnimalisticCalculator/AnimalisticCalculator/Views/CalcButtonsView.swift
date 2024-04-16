@@ -145,7 +145,13 @@ struct CalcButtonsView: View {
         }
         
         let expr = NSExpression(format: calculating)
-        return expr.expressionValue(with: nil, context: nil) as! Double
+        // MARK: long expressions or overly large calues cause app to crash
+        if let res = expr.expressionValue(with: nil, context: nil) as? Double {
+            return res
+        } else {
+            print("Error calculating")
+            return 0
+        }
     }
     
     func isLastCharDigit(of str: String) -> Bool {

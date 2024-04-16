@@ -17,7 +17,7 @@ struct LightDarkModeIndicatorView: View {
         Button(action: {
             isLightMode.toggle()
         }, label: {
-            ButtonView(size: 45, buttonSymbol: isLightMode ? .lightMode : .darkMode, bgColor: bgColor, fgColor: fgColor)
+            ButtonView(size: UIDevice.isIpad ? 80 : 50, buttonSymbol: isLightMode ? .lightMode : .darkMode, bgColor: bgColor, fgColor: fgColor)
         })
     }
 }
