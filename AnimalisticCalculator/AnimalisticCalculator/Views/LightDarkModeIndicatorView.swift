@@ -9,13 +9,15 @@ import SwiftUI
 
 struct LightDarkModeIndicatorView: View {
     @State var isLightMode: Bool = true
+    let fgColor = Asset.textColorPrimary.color
+    let bgColor = Asset.foregroundDigitButton.color
     
     var body: some View {
         HStack {
             Button(action: {isLightMode.toggle()}, label: {
-                Image(systemName: isLightMode ? "moon" : "sun.max").foregroundStyle(Asset.textColorPrimary.color)
+                Image(systemName: isLightMode ? "moon" : "sun.max").foregroundStyle(fgColor)
             })
-            .buttonStyle(CalcButton(color: Asset.foregroundDigitButton.color))
+            .buttonStyle(CalcButton(bgColor: bgColor, shadowColor: fgColor))
             Spacer()
             Spacer()
         }

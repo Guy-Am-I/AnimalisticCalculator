@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Operation {
     case add, subtract, multiply, divide, equal, none
@@ -25,19 +26,18 @@ enum ButtonSymbol: String {
     case clear = "AC"
     case comma = ","
     case decimal = "."
+    
+    case backspace = "IMGdelete.left"
+    case add = "IMGplus"
+    case subtract = "IMGminus"
+    case multiply = "IMGmultiply"
+    case divide = "IMGdivide"
+    case equal = "IMGequal"
+    case paren = "IMGparentheses"
+    case percent = "IMGpercent"
 }
 
-enum ButtonSymbolImage: String {
-    case backspace = "delete.left"
-    case add = "plus"
-    case subtract = "minus"
-    case multiply = "multiply"
-    case divide = "divide"
-    case equal = "equal"
-    case paren = "parentheses"
-    case percent = "percent"
-}
 
-let enumOperators: [ButtonSymbolImage] = [.subtract, .add, .multiply, .divide]
+let enumOperators: [ButtonSymbol] = [.subtract, .add, .multiply, .divide]
 
 
