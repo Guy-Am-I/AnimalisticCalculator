@@ -28,9 +28,8 @@ struct ComputationView: View {
                     .fontWeight(.semibold)
                     .lineLimit(1)
             }.minimumScaleFactor(0.1)
-            Spacer()
         }
-        .frame(maxHeight: 250)
+        .frame(maxHeight: 200)
         .padding()
     }
 }
