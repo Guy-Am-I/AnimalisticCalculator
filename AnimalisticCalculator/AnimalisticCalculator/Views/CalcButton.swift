@@ -17,7 +17,7 @@ struct CalcButton: ButtonStyle {
             .frame(width: size, height: size)
             .background(bgColor)
             .clipShape(Circle())
-            .shadow(color: shadowColor.opacity(0.2), radius: 10, x: 10, y: 10)
+            .shadow(color: shadowColor.opacity(0.2), radius: 10, x: 5, y: 5)
             .scaleEffect(configuration.isPressed ? 1.2 : 1)
             .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
     }

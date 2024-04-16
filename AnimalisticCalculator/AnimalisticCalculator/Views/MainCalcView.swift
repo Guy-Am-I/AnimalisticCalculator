@@ -14,18 +14,18 @@ struct MainCalcView: View {
     
     var body: some View {
         ZStack {
-            Asset.backgroundPrimary.color.opacity(0.6)
+            Asset.backgroundPrimary.color
                 .ignoresSafeArea()
             VStack {
                 ComputationView(currentComputation: currentComputation, mainResult: mainResult)
-                
+                LightDarkModeIndicatorView(isLightMode: $lightMode)
                 CalcButtonsView(currentComputation: $currentComputation, mainResult: $mainResult)
             }.padding()
         }
+        .environment(\.colorScheme, lightMode ? .light : .dark)
     }
 }
 
 #Preview {
     MainCalcView()
-        .preferredColorScheme(.dark)
 }

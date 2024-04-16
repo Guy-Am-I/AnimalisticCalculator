@@ -59,7 +59,6 @@ struct CalcButtonsView: View {
         GeometryReader { geo in
             VStack {
                 Spacer()
-                LightDarkModeIndicatorView()
                 Grid() {
                     ForEach(buttonGrid) { buttonRow in
                         GridRow {

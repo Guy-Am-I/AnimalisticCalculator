@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct LightDarkModeIndicatorView: View {
-    @State var isLightMode: Bool = true
+    //@Environment(\.colorScheme) var colorScheme
+    @Binding var isLightMode: Bool
+    
     let fgColor = Asset.textColorPrimary.color
     let bgColor = Asset.foregroundDigitButton.color
     
@@ -24,10 +26,9 @@ struct LightDarkModeIndicatorView: View {
             Spacer()
         }
         .padding(.horizontal, 5)
-        .environment(\.colorScheme, isLightMode ? .light : .dark)
     }
 }
 
 #Preview {
-    LightDarkModeIndicatorView()
+    LightDarkModeIndicatorView(isLightMode: .constant(true))
 }
