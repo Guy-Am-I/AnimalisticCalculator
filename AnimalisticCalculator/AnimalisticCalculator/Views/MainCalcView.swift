@@ -14,15 +14,12 @@ struct MainCalcView: View {
     
     var body: some View {
         ZStack {
-            Asset.backgroundPrimary.color
+            Asset.backgroundPrimary.color.opacity(0.6)
                 .ignoresSafeArea()
             VStack {
-                Spacer()
                 ComputationView(currentComputation: currentComputation, mainResult: mainResult)
-                LightDarkModeIndicatorView()
-                Spacer()
+                
                 CalcButtonsView(currentComputation: $currentComputation, mainResult: $mainResult)
-                Spacer()
             }.padding()
         }
     }
