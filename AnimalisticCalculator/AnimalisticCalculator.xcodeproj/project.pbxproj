@@ -17,6 +17,7 @@
 		780D9A5A2BCDD4F7001BCDB2 /* LightDarkModeIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A592BCDD4F7001BCDB2 /* LightDarkModeIndicatorView.swift */; };
 		780D9A5C2BCDD7DA001BCDB2 /* CalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A5B2BCDD7DA001BCDB2 /* CalcButton.swift */; };
 		780D9A5E2BCDEE80001BCDB2 /* ButtonEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A5D2BCDEE80001BCDB2 /* ButtonEnums.swift */; };
+		780D9A602BCE0F82001BCDB2 /* StringHelperFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780D9A5F2BCE0F82001BCDB2 /* StringHelperFuncs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		780D9A592BCDD4F7001BCDB2 /* LightDarkModeIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDarkModeIndicatorView.swift; sourceTree = "<group>"; };
 		780D9A5B2BCDD7DA001BCDB2 /* CalcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
 		780D9A5D2BCDEE80001BCDB2 /* ButtonEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonEnums.swift; path = AnimalisticCalculator/ButtonEnums.swift; sourceTree = SOURCE_ROOT; };
+		780D9A5F2BCE0F82001BCDB2 /* StringHelperFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelperFuncs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		780D9A402BCDAA7C001BCDB2 /* AnimalisticCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				780D9A5F2BCE0F82001BCDB2 /* StringHelperFuncs.swift */,
 				780D9A502BCDB5DB001BCDB2 /* Constants */,
 				780D9A4F2BCDAAFF001BCDB2 /* Views */,
 				780D9A412BCDAA7C001BCDB2 /* AnimalisticCalculatorApp.swift */,
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				780D9A602BCE0F82001BCDB2 /* StringHelperFuncs.swift in Sources */,
 				780D9A5E2BCDEE80001BCDB2 /* ButtonEnums.swift in Sources */,
 				780D9A5A2BCDD4F7001BCDB2 /* LightDarkModeIndicatorView.swift in Sources */,
 				780D9A5C2BCDD7DA001BCDB2 /* CalcButton.swift in Sources */,
